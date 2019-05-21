@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript" src="script.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<title>Amsterdam</title>
+</head>
+
+<body onLoad="loadLocalStorage()"> 
+    
+<ul class="topnav">
+  <li><a href="index.html" class="active">Home</a></li>
+  <li><a href="attractions.html">Attractions</a></li>
+  <li><a href="gallery.html">Gallery</a></li>
+  <li><a href="history.html">History</a></li>
+  <li><a href="tickets.html">Tickets</a></li>
+  <li><a href="subscribe.html">Subscribe</a></li>
+    
+<li style="float: right;">
+  <a onClick="color2()" alt="Incrase font"><div class="fontManipulation fontManipulation3">
+      T+
+  </div></a></li>
+    
+<li style="float: right;">
+  <a onClick="color1()" alt="Incrase font"><div class="fontManipulation fontManipulation2">
+      T+
+  </div></a></li>
+    
+   <li style="float: right;">
+  <a onClick="zoomFontOut();" alt="Default font"><div class="fontManipulation">
+      T-
+  </div></a>    
+      
+      
+  </li>
+  <li style="float: right;">
+  <a onClick="zoomFontIn()" alt="Incrase font"><div class="fontManipulation">
+      T+
+  </div></a></li>
+ 
+  
+</ul>
+    
+<div id="header">
+    <div style="height: 20%"></div>
+    
+    <img src="images/iamsterdam.png" style="width: 60%; text-align: center;"/>
+    
+    
+    <div id="weather">
+    <p>Error while loading</p>
+    <section id="getIt"></section>
+    </div>
+    
+    
+    
+    
+    
+    
+</div>
+<div id="fontManip">
+<div id="content">
+    <div class="ciekawostka">
+        <h1>Subscribe</h1>
+        <p>Be on top with the new information/events in Amsterdam!</p><br><br>
+        <a href="subscribe.html" class="button">Check more</a>
+    </div>
+    <div class="info-box">
+    <h1>History of Amsterdam</h1>
+    <p>Amsterdam has a long and eventful history. The origins of the city lie in the 12th century, when fishermen living along the banks of the River Amstel built a bridge across the waterway near the IJ, which at the time was a large saltwater inlet. Wooden locks under the bridge served as a dam protecting the village from the rising IJ waters, which often flooded the early settlement. The mouth of the river Amstel, where the Damrak is now, formed a natural harbor, which became important for trading-exchange from the larger koggeships into the smaller ships that sailed the merchandise deeper into the hinterland.</p>
+    <p><img id="myImg" class="miniatura myImages" src="images/amsterdam_history1.jpg" alt="History of Amsterdam" style="display: inline" /> 
+    <img id="myImg" class="miniatura myImages" src="images/amsterdam_history2.jpg" alt="History of Amsterdam" style="display: inline" />
+    <img id="myImg" class="miniatura myImages" src="images/amsterdam_history3.jpg" alt="History of Amsterdam" style="display: inline" /></p>
+    <p>Click on photo to enlarge.</p>
+    <a href="history.html" class="button" style="float: right;">Read more about history</a>
+        
+    
+        
+        
+
+    </div>
+    
+    <div class="ciekawostka">
+        <h1>Buy tickets!</h1>
+        <p>Check the best prices for museum or tour tickets. You can find something for you!</p><br>
+        <a href="tickets.html" class="button">Buy tickets</a>
+    </div>
+    
+    <div class="info-box">
+    <h1>Gallery</h1>
+    <p>Check beautiful photos of amsterdam. Check our gallery</p>
+    <p>
+    <img id="myImg" class="miniatura myImages" src="images/amsterdam1.jpg" alt="Check our gallery for more photos"/>
+    <img id="myImg" class="miniatura myImages" src="images/amsterdam2.jpg" alt="Check our gallery for more photos" />
+    <img id="myImg" class="miniatura myImages" src="images/amsterdam3.jpg" alt="Check our gallery for more photos" />
+    <img id="myImg" class="miniatura myImages" src="images/amsterdam4.jpg" alt="Check our gallery for more photos" />
+    </p>
+    <p>Click on photo to enlarge.</p>
+    <a href="gallery.html" class="button" style="float: right;">Check our gallery for more photos</a>   
+    </div>
+
+    <div class="info-box">
+    <h1>Attractions</h1>
+    <p>With more than 800 years of history to discover, Amsterdam is rich with fascination sights. From ancient churches to magnificent museums, secret courtyards to quaint cobbled streets, and, of course, the city's world-famous canals there's an overwhelming amount of things to see and do in Amsterdam. So pack your camera, pick up a map and get ready for an adventure! </p> 
+
+<h2>Go sightseeing in Amsterdam</h2>
+<p>From the Old Masters at the Rijksmuseum to modern and contemporary art and design at the Stedelijk, Amsterdam’s world-class art museums have enough to offer to fill weeks. But there are plenty more ways to soak up Amsterdam’s history too: the famous Anne Frank House, a collection of quirky and unusual museums, and the postcard-perfect streets of the Jordaan. Of course, no visit to Amsterdam is complete without the classics – along the way you’ll find all the tulips, windmills and cheese you could wish for.     </p>
+    <p>
+    <img id="myImg" class="miniatura myImages" src="images/amsterdam_attractions1.jpg" alt="Attractions in amsterdam" />
+    <img id="myImg" class="miniatura myImages" src="images/amsterdam_attractions2.jpg" alt="Attractions in amsterdam" />
+    <img id="myImg" class="miniatura myImages" src="images/amsterdam_attractions3.jpg" alt="Attractions in amsterdam" /></p>
+    <p>Click on photo to enlarge.</p>
+    <a href="attractions.html" class="button" style="float: right;">Check attractions is Amsterdam</a>
+        <div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+    <script src="zoom.js"></script>
+    </div>
+
+</div>
+    
+    
+<div id="footer">
+    <p>Copyright by Grzegorz Pietrzak (2018). All rights reserved.</p>
+    <h3>Website has been made by Grzegorz Pietrzak for academic purposes only. Text on website is not mine and has been referenced in documentation.</h3><p>
+    </p>
+    <h2>Contact:</h2>
+    <p>pieg1_15@uni.worc.ac.uk</p><br><br>
+    <p>
+    <img src="images/html5.png" class="stopka">
+    <img src="images/css3.png" class="stopka">
+    <img src="images/js.png" class="stopka">
+    </p>
+    
+    
+
+    
+     </div></div>
+<script src="script.js"></script>
+    
+
+</body>
+
+</html>

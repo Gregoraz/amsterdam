@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript" src="script.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<meta name="author" content="Grzegorz Pietrzak">
+<script src="animation.js" type="text/javascript"></script>
+<title>Amsterdam</title>
+</head>
+
+<body onLoad="loadLocalStorage()">
+    
+<ul class="topnav">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="attractions.html">Attractions</a></li>
+  <li><a href="gallery.html">Gallery</a></li>
+  <li><a href="history.html">History</a></li>
+  <li><a href="tickets.html">Tickets</a></li>
+  <li><a href="subscribe.html" class="active">Subscribe</a></li>
+    <li style="float: right;">
+  <a onClick="color2()" alt="Incrase font"><div class="fontManipulation fontManipulation3">
+      T+
+  </div></a></li>
+    
+<li style="float: right;">
+  <a onClick="color1()" alt="Incrase font"><div class="fontManipulation fontManipulation2">
+      T+
+  </div></a></li>
+    
+   <li style="float: right;">
+  <a onClick="zoomFontOut();" alt="Default font"><div class="fontManipulation">
+      T-
+  </div></a>    
+      
+      
+  </li>
+  <li style="float: right;">
+  <a onClick="zoomFontIn()" alt="Incrase font"><div class="fontManipulation">
+      T+
+  </div></a></li>
+  
+</ul>
+    
+<div id="header">
+
+<div style="height: 20%"></div>
+    
+    <img src="images/iamsterdam.png" style="width: 60%; text-align: center;"/>
+    
+    <div id="weather">
+    <p>Error while loading</p>
+    <section id="getIt"></section>
+    </div>
+</div>
+<div id="fontManip">    
+<div id="content">
+    
+    <div class="info-box2" style="text-align:center;">
+    <h1>Subscribe</h1>
+    <h2>Fill the forms to receive news about Amsterdam!</h2>
+    <form action="http://www.w3schools.com/action_page.php">
+    First name: *<br />
+    <input type="text" name="firstname" minlength="2" maxlength="22" required pattern="^[a-zA-Z ]+$" title="Only letters are allowed here!">
+    <br />
+  Last name: *<br />
+  <input type="text" name="lastname" minlength="2" maxlength="22" required pattern="^[a-zA-Z ]+$" title="Only letters are allowed here!">
+  <br>
+  Email address: *<br />
+  <input id="id1" type="email" name="email" maxlength="22" required>
+  <br>
+        <p id="demo">* - required</p><br><br>
+  <input type="submit" value="Submit" class="button" onclick="checkEmail();">
+</form> </div>
+        
+        <div style="text-align:center; margin-bottom: 25px;">
+    <canvas id="myCanvas" height="400" width="600" onLoad="init()">
+    </canvas>
+            
+            
+            
+            
+            
+            
+            
+            
+        <script src="animation.js">
+        
+        </script>
+
+    </div>
+    
+</div>
+    
+    
+<div id="footer">
+    
+    <p>Copyright by Grzegorz Pietrzak (2018). All rights reserved.</p>
+    <h3>Website has been made by Grzegorz Pietrzak for academic purposes only. Text on website is not mine and has been referenced in documentation.</h3><p>
+    </p>
+    <h2>Contact:</h2>
+    <p>pieg1_15@uni.worc.ac.uk</p><br><br>
+    <p>
+    <img src="images/html5.png" class="stopka">
+    <img src="images/css3.png" class="stopka">
+    <img src="images/js.png" class="stopka">
+    
+    </p>
+    
+    
+
+    
+     </div></div>
+<script src="script.js"></script>
+
+</body>
+
+</html>

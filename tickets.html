@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="script.js" type="text/javascript"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<meta name="author" content="Grzegorz Pietrzak">
+<title>Amsterdam</title>
+</head>
+
+<body onLoad="loadLocalStorage()">
+    
+<ul class="topnav">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="attractions.html">Attractions</a></li>
+  <li><a href="gallery.html">Gallery</a></li>
+  <li><a href="history.html">History</a></li>
+  <li><a href="tickets.html" class="active">Tickets</a></li>
+  <li><a href="subscribe.html">Subscribe</a></li>
+  <li style="float: right;">
+  <a onClick="color2()" alt="Incrase font"><div class="fontManipulation fontManipulation3">
+      T+
+  </div></a></li>
+    
+<li style="float: right;">
+  <a onClick="color1()" alt="Incrase font"><div class="fontManipulation fontManipulation2">
+      T+
+  </div></a></li>
+    
+   <li style="float: right;">
+  <a onClick="zoomFontOut();" alt="Default font"><div class="fontManipulation">
+      T-
+  </div></a>    
+      
+      
+  </li>
+  <li style="float: right;">
+  <a onClick="zoomFontIn()" alt="Incrase font"><div class="fontManipulation">
+      T+
+  </div></a></li>
+</ul>
+    
+<div id="header">
+
+<div style="height: 20%"></div>
+    
+    <img src="images/iamsterdam.png" style="width: 60%; text-align: center;"/>
+    
+    <div id="weather">
+    <p>Error while loading</p>
+    <section id="getIt"></section>
+    </div>
+</div>
+<div id="fontManip">    
+<div id="content" style="text-align: center">
+    
+    <h1>Buy tickets for events in Amsterdam!</h1>
+    
+    <div class="info-box2">
+    <h1>Rijksmuseum</h1>
+    <p>The Rijksmuseum is the largest art museum in the Netherlands and boasts an impressive collection of world famous works by such masters as Vincent Van Gogh, Johannes Vermeer, Frans Hals and Rembrandt van Rijn. After an extensive 10-year renovation project, the Rijksmuseum was reinaugurated in 2013 by then-Queen Beatrix. The building is located in the heart of Amsterdam’s Museumplein, where you’ll also find the Stedelijk and the Van Gogh Museum, as well as the Royal Concertgebouw, which is often regarded as one of the best concert halls in the world. Book your tickets today and discover the wonders of this Dutch national treasure!</p>
+    <p>
+    <img id="myImg" class="miniatura myImages" src="https://www.tours-tickets.com/media/36705/001a_museums_tt_rijksmuseum.jpg" alt="Rijksmuseum" />
+    <img id="myImg" class="miniatura myImages" src="https://www.tours-tickets.com/media/36706/001b_museums_tt_rijksmuseum2.jpg" alt="Rijksmuseum" />
+    <img id="myImg" class="miniatura myImages" src="https://www.tours-tickets.com/media/36707/001c_museums_tt_rijksmuseum3.jpg" alt="Rijksmuseum" />
+    </p>
+    <p>Click on photo to enlarge.</p>
+    <h2>Visit one of the Netherlands’ most cherished attractions!</h2>
+    <p>The current building of the Rijksmuseum, designed by Dutch architect Pierre Cuypers, first opened its doors in 1885 and has been a national heritage site since 1970. The recent renovation project has followed in the footsteps of similar initiatives by world museums such as the Tate Modern in London and the Louvre in Paris, in terms of combining the old with the modern. The atrium features a high glass ceiling and spacious, contemporary architecture which blends uniquely with the traditional red-brick walls. The collection contains more than one million pieces and has about eight thousand paintings, sculptures and historical artifacts on display, spanning from the year 1200 to the present. Some of the most notable works include Rembrandt’s The Night Watch (1642), Vermeer’s The Milkmaid (1647) and one of Van Gogh’s untitled self-portraits (1887).</p>
+    <h2>Get your Rijksmuseum Amsterdam Tickets!</h2>
+    <p>The Rijksmuseum is definitely one of Amsterdam’s must-see attractions. Get your Rijksmuseum Amsterdam tickets today and make sure you don’t miss it! You can also combine your Rijksmuseum Amsterdam tickets with a number of our other fantastic offers and save even more money. A visit to the impressive Rijksmuseum is a perfect way to escape the hustle and bustle of the lively center and spend a relaxed afternoon gazing upon some of the history’s most famous and influential masterpieces. You can reserve cheap Rijksmuseum Amsterdam Tickets directly through our Tours and Tickets website. Get yours now and complete your Amsterdam experience!</p>
+    <h2>Price</h2>    
+    <p>Per adult: € 17.50</p>
+    <p>Per children: € 0</p>
+    <a href="https://www.tours-tickets.com/en/museums/rijksmuseum/" class="button" target="_blank">Buy a ticket</a>
+    
+    
+    </div>
+    
+    <div class="info-box2">
+    <h1>Van Gogh Museum</h1>
+    <p>When you want to visit a touristic attraction during your stay in Amsterdam, you cannot pass up on the Van Gogh Museum. The Van Gogh Museum has the world’s largest collection of paintings, drawings, and letters by famous Dutch painter Vincent van Gogh. This influential artist hardly needs an introduction, as his extensive body of work is amongst some of the most well-known in the history of modern art. A trip to the Van Gogh Museum is an essential part of your experience in Amsterdam. Enjoy a relaxing afternoon admiring the beautiful Van Gogh paintings and works by his contemporaries, as well as learning about the fascinating history of this prolific artist. Purchase your tickets now and discover the beauty at the Van Gogh Museum!</p>
+    <p>    
+    <img id="myImg" class="miniatura myImages" src="https://www.tours-tickets.com/media/36710/002b_museums_tt_vangogh2.jpg" alt="Van Gogh Museum" />
+    <img id="myImg" class="miniatura myImages" src="https://www.tours-tickets.com/media/36711/002a_museums_tt_vangogh1.jpg" alt="Van Gogh Museum" />
+    <img id="myImg" class="miniatura myImages" src="https://www.tours-tickets.com/media/36712/002c_museums_tt_vangogh3.jpg" alt="Van Gogh Museum" /></p>
+    <p>Click on photo to enlarge.</p>
+    <h2>Discover the world’s largest Van Gogh collection at the museum in Amsterdam</h2>
+    <p>The Van Gogh Museum is located in Amsterdam, at the Museumplein, the famous square where you’ll also find the Rijksmuseum, the Concertgebouw concert hall, and the Stedelijk Museum. It is The Netherlands’ second most-visited museum, attracting between one to two million visitors each year. The Van Gogh Museum consists of two buildings, which were designed by acclaimed architects Kisho Kurokawa and Gerrit Rietveld. The Kurokawa wing is used for temporary exhibitions and the Rietveld building displays the permanent works. There you will find over 200 paintings, 400 drawings and 700 letters by the Dutch artist. Some of the most well-known pieces on display include the Van Gogh Sunflowers (1889), Almond Blossoms (1890) and The Potato Eaters (1885).</p>
+    <h2>Van Gogh’s contemporaries</h2>
+    <p>The museum also houses works by some of Van Gogh’s contemporaries, including Auguste Rodin, Claude Monet, Georges Seurat and Odilon Redon, amongst others. During your visit to the Van Gogh Museum, you’ll be able to learn about the painter’s captivating history and his influence on the development of modern art during one of the tours.</p>
+    <h2>Tickets to the Van Gogh Museum? Book here!</h2>
+    <p>Get your Van Gogh Museum tickets through our website and make sure you don’t miss the chance to pay a visit to this spectacular Amsterdam museum. By booking your Van Gogh Museum tickets online, you can save time and avoid the lines at the ticket counter. Complete your Amsterdam experience and get to know one of the world’s most fascinating museums. Don’t miss this opportunity and book your Van Gogh Museum fast-track tickets right now! Saving money? Combine your Van Gogh ticket with a canal cruise through the city center of Amsterdam with our combi discount tickets.</p>
+    <h2>Price</h2>
+    <p>Per adult: € 18.00</p>
+    <p>Per children: € 0</p>
+    <a href="https://www.tours-tickets.com/en/museums/van-gogh-museum/" class="button" target="_blank">Buy a ticket</a>
+    </div>
+    
+    <div class="info-box2">
+    <h1>Red Light Secrets (+18)</h1>
+    <p>Red Light Secrets is the world’s first and only museum of prostitution. It is located at the very center of the famous Red Light District in Amsterdam and offers a unique peek into the ins and outs of the world’s oldest profession. Red Light Secrets is housed in a historical 17th-century canal house and is one of the city’s top attractions. Discover the hidden world behind the industry, learn about the trade from first-hand accounts by the working girls themselves and enjoy a behind-the-scenes look into this fascinating topic. Book your tickets to Red Light Secrets right now!</p>
+    <p>    
+    <img id="myImg" class="miniatura myImages" src="https://www.tours-tickets.com/media/36718/004a_museums_tt_redlightsecrets1.jpg" alt="Red Light Secrets (+18)" />
+    <img id="myImg" class="miniatura myImages" src="https://www.tours-tickets.com/media/36720/004c_museums_tt_redlightsecrets3.jpg" alt="Red Light Secrets (+18)" />
+    <img id="myImg" class="miniatura myImages" src="https://www.tours-tickets.com/media/36719/004b_museums_tt_redlightsecrets2.jpg" alt="Red Light Secrets (+18)" /></p>
+    <p>Click on photo to enlarge.</p>
+    <h2>Discover Red Light Secrets, Prostitution Museum Amsterdam</h2>
+    <p>The Prostitution Museum Amsterdam is a must-see during your holidays in the Netherlands. During your visit, you will experience what it feels like to sit behind one of the famous windows where the sexual workers try to appeal to passersby and lure customers in. You will also be able to listen to their experiences and see their perspective on the topic. Unlike in the rest of the Red Light District, pictures are allowed and encouraged in the Prostitution Museum Amsterdam. Red Light Secrets aims to educate the public about the profession in a light-hearted, informative way, and remove the taboo and negativity generally associated with the topic. You will learn about the history of this notorious neighborhood and experience a typical day in the life of a working girl. A trip to the old city center is not complete without visiting the Prostitution Museum. Amsterdam is known for its open-minded culture and relaxed views on topics which have been the source of controversy in other parts of the world. Experience how it works there first hand at the one and only Red Light Secrets!</p>
+    <h2>Book your visit to Red Light Secrets online!</h2>
+    <p>Book your tickets to Red Light Secrets now to ensure availability during your time in Amsterdam. Red Light Secrets is a must-see attraction that draws thousands of visitors each year. It is conveniently located in the heart of the city center and therefore easy to combine with other attractions in the area. Don’t miss this unique opportunity and get your tickets now! </p>
+    <h2>Price</h2>
+    <p>Adults (only): € 10.50</p>
+    <a href="https://www.tours-tickets.com/en/museums/red-light-secrets/" class="button" target="_blank">Buy tickets</a>
+    </div>
+    
+    <div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+    <div id="caption"></div>
+    </div>
+    <script src="zoom.js"></script>
+</div>
+    
+    
+<div id="footer">
+    <p>Copyright by Grzegorz Pietrzak (2018). All rights reserved.</p>
+    <h3>Website has been made by Grzegorz Pietrzak for academic purposes only. Text on website is not mine and has been referenced in documentation.</h3><p>
+    </p>
+    <h2>Contact:</h2>
+    <p>pieg1_15@uni.worc.ac.uk</p><br><br>
+    <p>
+    <img src="images/html5.png" class="stopka">
+    <img src="images/css3.png" class="stopka">
+    <img src="images/js.png" class="stopka">
+    </p>
+    
+    
+
+    
+     </div></div>
+<script src="script.js"></script>
+
+</body>
+
+</html>

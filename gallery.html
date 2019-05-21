@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript" src="script.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<meta name="author" content="Grzegorz Pietrzak">
+<script src="animation.js" type="text/javascript"></script>
+<title>Amsterdam</title>
+</head>
+
+<body onload="init()">
+    
+<ul class="topnav">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="attractions.html">Attractions</a></li>
+  <li><a href="gallery.html" class="active">Gallery</a></li>
+  <li><a href="history.html">History</a></li>
+  <li><a href="tickets.html">Tickets</a></li>
+  <li><a href="subscribe.html">Subscribe</a></li>
+    <li style="float: right;">
+  <a onClick="color2()" alt="Incrase font"><div class="fontManipulation fontManipulation3">
+      T+
+  </div></a></li>
+    
+<li style="float: right;">
+  <a onClick="color1()" alt="Incrase font"><div class="fontManipulation fontManipulation2">
+      T+
+  </div></a></li>
+    
+   <li style="float: right;">
+  <a onClick="zoomFontOut();" alt="Default font"><div class="fontManipulation">
+      T-
+  </div></a>    
+      
+      
+  </li>
+  <li style="float: right;">
+  <a onClick="zoomFontIn()" alt="Incrase font"><div class="fontManipulation">
+      T+
+  </div></a></li>
+  
+</ul>
+    
+<div id="header">
+<div style="height: 20%"></div>
+    
+    <img src="images/iamsterdam.png" style="width: 60%; text-align: center;"/>
+
+    
+    <div id="weather">
+    <p>Error while loading</p>
+    <section id="getIt"></section>
+    </div>
+</div>
+ <div id="fontManip">   
+<div id="content" style="text-align: center">
+    <h1>Check our gallery of Amsterdam!</h1>
+    <p>Click on photo to enlarge.</p>
+    <div id="galeria">
+    <img id="myImg" class="miniatura myImages" src="images/amsterdam5.jpg" alt="Bridge" style="display: inline" />
+    <img id="myImg" class="miniatura myImages" src="images/amsterdam6.jpg" alt="Amsterdam at night" style="display: inline" /> 
+    <img id="myImg" class="miniatura myImages" src="images/amsterdam7.jpg" alt="Shops" style="display: inline" /> 
+    <img id="myImg" class="miniatura myImages" src="images/amsterdam8.jpg" alt="Fanart" style="display: inline" /> <br />
+    <img id="myImg" class="miniatura myImages" src="images/amsterdam9.jpg" alt="Streets" style="display: inline" /> 
+    <img id="myImg" class="miniatura myImages" src="images/amsterdam10.jpg" alt="Weather in Amsterdam" style="display: inline" /> 
+    <img id="myImg" class="miniatura myImages" src="images/amsterdam11.jpg" alt="Another bridge" style="display: inline" /> 
+    <img id="myImg" class="miniatura myImages" src="images/amsterdam12.jpg" alt="Bikes by the river" style="display: inline" /> <br />
+    <img id="myImg" class="miniatura myImages" src="images/amsterdam13.jpg" alt="Night life" style="display: inline" /> 
+    <img id="myImg" class="miniatura myImages" src="images/amsterdam14.jpg" alt="Night life" style="display: inline" /> 
+    <img id="myImg" class="miniatura myImages" src="images/amsterdam15.jpg" alt="Airport" style="display: inline" /> 
+    <img id="myImg" class="miniatura myImages" src="images/amsterdam16.jpg" alt="Sky" style="display: inline" /> <br />
+    <img id="myImg" class="miniatura myImages" src="images/amsterdam17.jpg" alt="Bikes" style="display: inline" /> 
+    <img id="myImg" class="miniatura myImages" src="images/amsterdam18.jpg" alt="Bikes" style="display: inline" /> 
+    <img id="myImg" class="miniatura myImages" src="images/amsterdam19.jpg" alt="Pubs" style="display: inline" /> 
+    <img id="myImg" class="miniatura myImages" src="images/amsterdam20.jpg" alt="Amsterdam" style="display: inline" /> 
+        <div id="myModal" class="modal">        
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+        </div>
+    <script src="zoom.js"></script>             
+    </div>
+    </div>
+    
+    
+<div id="footer">
+    <p>Copyright by Grzegorz Pietrzak (2018). All rights reserved.</p>
+    <h3>Website has been made by Grzegorz Pietrzak for academic purposes only. Text on website is not mine and has been referenced in documentation.</h3><p>
+    </p>
+    <h2>Contact:</h2>
+    <p>pieg1_15@uni.worc.ac.uk</p><br><br>
+    <p>
+    <img src="images/html5.png" class="stopka">
+    <img src="images/css3.png" class="stopka">
+    <img src="images/js.png" class="stopka">
+    </p>
+    
+    
+
+    
+     </div></div>
+<script src="script.js"></script>
+
+</body>
+
+</html>

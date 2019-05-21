@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="script.js" type="text/javascript"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<meta name="author" content="Grzegorz Pietrzak">
+<title>Amsterdam</title>
+</head>
+
+<body onLoad="loadLocalStorage()">
+    
+<ul class="topnav">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="attractions.html" class="active">Attractions</a></li>
+  <li><a href="gallery.html">Gallery</a></li>
+  <li><a href="history.html">History</a></li>
+  <li><a href="tickets.html">Tickets</a></li>
+  <li><a href="subscribe.html">Subscribe</a></li>
+    <li style="float: right;">
+  <a onClick="color2()" alt="Incrase font"><div class="fontManipulation fontManipulation3">
+      T+
+  </div></a></li>
+    
+<li style="float: right;">
+  <a onClick="color1()" alt="Incrase font"><div class="fontManipulation fontManipulation2">
+      T+
+  </div></a></li>
+    
+   <li style="float: right;">
+  <a onClick="zoomFontOut();" alt="Default font"><div class="fontManipulation">
+      T-
+  </div></a>    
+      
+      
+  </li>
+  <li style="float: right;">
+  <a onClick="zoomFontIn()" alt="Incrase font"><div class="fontManipulation">
+      T+
+  </div></a></li>
+  
+</ul>
+    
+<div id="header">
+<div style="height: 20%"></div>
+    
+    <img src="images/iamsterdam.png" style="width: 60%; text-align: center;"/>
+
+    
+    <div id="weather">
+    <p>Error while loading</p>
+    <section id="getIt"></section>
+    </div>
+</div>
+<div id="fontManip">
+<div id="content" style="text-align: center">
+    
+    <h1>Attractions in Amsterdam</h1>
+    <p>How to spend a lovely time in Amsterdam</p>
+    
+    <div id="video-container"  onmouseover="document.getElementById('buttony').style.display = 'block';" onmouseout="document.getElementById('buttony').style.display = 'none';" style="padding-bottom: 50px; width: auto;">
+    <video id="myVideo" width="640" height="480">
+    <source src="video.mp4" type="video/mp4">
+    <source src="video.ogg" type="video/ogg">
+    Your browser does not support the video tag.
+    </video>
+    <div id="buttony">
+    <button id="minus10" alt="Go back 10s">&#8592;</button> 
+    <button id="playVideo" alt="Play/Pause">Play</button>
+    <input type="range" min = "0" max = "100" value="0" step="1" id="seekbarContent" alt="Scroll the moment">
+    <button id="muteVideo" alt="Mute video">Mute</button>Volume
+    <input type="range" min = "0" max = "100" value="75" step="1" id="seekbarVolume" alt="Volume controll">
+    <button id="fullScreen" alt="Full screen mode">Full-Screen</button>   
+    <button id="plus10" alt="Skip 10s">&#8594;</button>  <br>
+   
+     
+    </div>
+    </div>
+    
+    
+    
+    <script>
+    var video = document.getElementById("myVideo");
+    var playVideo = document.getElementById("playVideo");
+    var muteVideo = document.getElementById("muteVideo")
+    var seekbarVolume = document.getElementById("seekbarVolume");
+    var fullScreen = document.getElementById("fullScreen");
+    var seekbarContent = document.getElementById("seekbarContent");
+    var plus10 = document.getElementById("plus10");
+    var minus10 = document.getElementById("minus10");
+
+function playVideoFunction() {     //Interface - play video
+ if (video.paused){
+ video.play();
+ playVideo.innerHTML = "Pause";
+ } else {
+ video.pause();
+ playVideo.innerHTML = "Resume";
+
+}
+}
+        
+function muteVideoFunction() {
+    if (video.muted){
+        video.muted = false;
+        muteVideo.innerHTML = "Mute";
+    }
+    else{
+        video.muted = true;
+        muteVideo.innerHTML = "Unmute";
+    }
+}
+        
+function videoSoundFunction() {
+    video.volume = seekbarVolume.value/100;
+}
+     
+function enterFullScreen() {
+    video.webkitRequestFullScreen();
+}
+        
+function videoRewind() {
+    
+    var slideto = video.duration * (seekbarContent.value / 100);
+    video.currentTime = slideto;
+}
+        
+        
+function plus10Function() { //jumps 10sec
+    video.currentTime = video.currentTime+10;
+}
+        
+function minus10Function() { //goes back 10sec
+    video.currentTime = video.currentTime-10;
+}
+        
+function updateSeekbarContent() { //updating seekbar content
+    var newtime = video.currentTime * (100 / video.duration);
+    seekbarContent.value = newtime;
+}
+        
+video.addEventListener("click", updateSeekbarContent);
+playVideo.addEventListener("click", playVideoFunction);
+muteVideo.addEventListener("click", muteVideoFunction);
+seekbarVolume.addEventListener("click", videoSoundFunction);
+fullScreen.addEventListener("click", enterFullScreen);
+seekbarContent.addEventListener("click", videoRewind);
+plus10.addEventListener("click", plus10Function);
+minus10.addEventListener("click", minus10Function);
+        
+    </script>
+    
+    
+    
+    
+    
+    
+    
+    <div class="info-box2">
+    <h1>Riekermolen - Windmill</h1>
+    <img id="myImg" class="miniatura myImages" src="https://media.iamsterdam.com/ndtrc/Images/20101116/d3c10913-318f-4d29-be16-f4de22f6dcc1.jpg" alt="Riekermolen - Windmill" />
+    <p>Click on photo to enlarge.</p>
+    <p>De Riekermolen is a historic polder drainage windmill that dates back to 1636. It sits proudly on the bank of the River Amstel in Amsterdam, alongside a statue of Rembrandt that celebrates the many sketches he made in this area.</p>
+   <h2>Still spinning after all of these years</h2>
+ <p>De Riekermolen was once used to drain a large plot of land nearby but it now stands as a testament to a bygone era. Nevertheless, it still spins on Saturdays and Sundays between 12:00 and 17:00, May to September – when the winds are favourable, of course. Unfortunately, the windmill's interior is not available for tours.</p>
+        <h2>Address:</h2>
+        <p>Riekermolen - Windmill,<br>
+            De Borcht 10,<br>
+            1083 AC AMSTERDAM</p>
+    </div>
+    <div class="info-box2">
+    <h1>Willem de Zwijgerkerk</h1>
+    <img id="myImg" class="miniatura myImages" src="https://media.iamsterdam.com/ndtrc/Images/20101118/e7d28851-1f2c-485f-bb1f-e8cbf7fffb5c.jpg" alt="Willem de Zwijgerkerk" />
+    <p>Click on photo to enlarge.</p>
+    <p>The monumental Willem de Zwijgerkerk (church) in the district of Amsterdam Zuid was built in 1930 in the “Amsterdamse School” style. The interior of this protestant church was completely restored in 1995. Besides holding religious services, the church plays an active role in the community. It is often rented out for cultural or community-related events.</p>
+    <h2>Address:</h2>
+    <p>
+    Willem de Zwijgerkerk,<br>
+Olympiaweg 14,<br>
+1076 VX AMSTERDAM    
+    </p>
+    </div>
+    
+    <div class="info-box2">
+    <h1>Molen de Adriaan</h1>
+    <img id="myImg" class="miniatura myImages" src="https://media.iamsterdam.com/ndtrc/Images/20141022/fac6b1d8-e26d-4620-b96e-a97f7b7ed363.jpg" alt="Molen de Adriaan" />
+    <p>Click on photo to enlarge.</p>
+    <p>No visit to Haarlem is complete without calling by for a guided tour of the Molen de Adriaan, a windmill close to the town centre. Set in a picturesque location alongside the Spaarne River, this tower mill has been one of the most striking features of the Haarlem skyline for centuries.</p>
+    <h2>Dominating Haarlem’s skyline</h2>
+    <p>The windmill was ravaged by fire in 1932 and it wasn’t until 2002 that this unique monument was restored to its former glory, once again taking its place as a distinctive feature on the Haarlem cityscape. The windmill is now home to a small museum offering guided tours, using models and visual installations to give visitors the low-down on the history of Molen de Adriaan and other Dutch windmills. The decked area outside the windmill offers fantastic views over the city.</p>
+    <h2>Address:</h2>
+    <p>
+    Molen de Adriaan,<br>
+    Papentorenvest 1A,<br>
+    2011 AV HAARLEM    
+    </p>
+    </div>
+    
+    <div class="info-box2">
+    <h1>Sint Nicolaasbasiliek</h1>
+    <img id="myImg" class="miniatura myImages" src="https://media.iamsterdam.com/ndtrc/Images/4d/4d8d8bd9-7c4e-461c-be3b-24a2af4514c2/5cbd5b35-3db3-4ebf-97e6-45a1399fc66d.jpg" alt="Sint Nicolaasbasiliek" />
+    <p>Click on photo to enlarge.</p>
+    <p>The Sint Nicolaasbasiliek (Saint Nicholas Church) is a Roman Catholic church located opposite Amsterdam's Central Station. Designed by architect Adrianus Bleijs, the church was built between 1884 and 1887. In 1999, both the interior and exterior of the church were lovingly restored.</p>
+    <h2>Tours</h2>
+    <p>Catholic services are held in Dutch almost every day, and Spanish services are offered on Fridays and Sundays. The church occasionally hosts concerts and recitals featuring the magnificently restored 19th-century Sauer organ. The church is open to the public for a few hours each day, depending on scheduled services and events. They also offer guided tours by request for groups of 7 or more participants.</p>
+    <h2>Address:</h2>
+    <p>
+    Sint Nicolaasbasiliek,<br>
+    Prins Hendrikkade 73,<br>
+    1012 AD AMSTERDAM    
+    </p>
+    
+    </div>
+    
+    <div class="info-box2">
+    <h1>Vondelkerk (Vondel Church)</h1>
+    <img id="myImg" class="miniatura myImages" src="https://media.iamsterdam.com/ndtrc/Images/20101116/01175242-84b7-4a22-abc8-0529abffbad1.jpg" alt="Vondelkerk (Vondel Church)" />  
+    <p>Click on photo to enlarge.</p>
+    <p>The charming Vondelkerk (Vondel Church) stands at the edge of the Vondelpark and was used as a church from 1880 to 1977. Today it houses the offices of a few small businesses. The beautiful former church space also hosts concerts and is rented out for special occasions, including weddings, formal dinners and meetings.</p>
+    <h2>Preserving monuments</h2>
+    <p>The church was built in Gothic revival style and was designed by P.J.H. Cuypers – the famous architect responsible for Amsterdam’s Central Station and Rijksmuseum. It is managed by Stadsherstel, which restores and preserves monuments ensuring that the original character of the building is left intact but that it is also suitable as a cultural venue. In this way, Amsterdam’s heritage remains open to the public.</p>
+    <h2>Address:</h2>
+    <p>Vondelkerk (Vondel Church),<br>
+    Vondelstraat 120,<br>
+    1054 GS AMSTERDAM</p>
+    </div>
+    
+    <div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+    <script src="zoom.js"></script>
+    
+</div>
+    
+    
+<div id="footer">
+    <p>Copyright by Grzegorz Pietrzak (2018). All rights reserved.</p>
+    <h3>Website has been made by Grzegorz Pietrzak for academic purposes only. Text on website is not mine and has been referenced in documentation.</h3><p>
+    </p>
+    <h2>Contact:</h2>
+    <p>pieg1_15@uni.worc.ac.uk</p><br><br>
+    <p>
+    <img src="images/html5.png" class="stopka">
+    <img src="images/css3.png" class="stopka">
+    <img src="images/js.png" class="stopka">
+    </p>
+    
+    
+
+    
+     </div></div>
+<script src="script.js"></script>
+
+</body>
+
+</html>
